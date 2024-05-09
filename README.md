@@ -1,4 +1,4 @@
 # juego
 
 Referencias:
-https://github.com/TommyGun2812/Laboratorio_Ramas/commit/ea1efec6e4bca5c3a3e597fdeafc4d53bfdd7211
+Pong — Free Python Games 2.5.3 documentation. (2017). Grantjenks.com. https://grantjenks.com/docs/freegames/pong.html 
