@@ -12,8 +12,7 @@ Exercises
 """
 
 from random import choice, random
-from turtle import *
-
+import turtle as tur
 from freegames import vector
 
 
@@ -33,22 +32,22 @@ def move(player, change):
 
 
 def rectangle(x, y, width, height):
-    """Draw rectangle at (x, y) with given width and height."""
-    up()
-    goto(x, y)
-    down()
-    begin_fill()
+    """Draw rectangle at (x, y) with given width and heightur."""
+    tur.up()
+    tur.goto(x, y)
+    tur.down()
+    tur.begin_fill()
     for count in range(2):
-        forward(width)
-        left(90)
-        forward(height)
-        left(90)
-    end_fill()
+        tur.forward(width)
+        tur.left(90)
+        tur.forward(height)
+        tur.left(90)
+    tur.end_fill()
 
 
 def draw():
     """Draw game and move pong ball."""
-    clear()
+    tur.clear()
     rectangle(-200, state[1], 10, 50)
     rectangle(190, state[2], 10, 50)
 
@@ -56,10 +55,10 @@ def draw():
     x = ball.x
     y = ball.y
 
-    up()
-    goto(x, y)
-    dot(10)
-    update()
+    tur.up()
+    tur.goto(x, y)
+    tur.dot(10)
+    tur.update()
 
     if y < -200 or y > 200:
         aim.y = -aim.y
@@ -82,16 +81,16 @@ def draw():
         else:
             return
 
-    ontimer(draw, 50)
+    tur.ontimer(draw, 50)
 
 
-setup(420, 420, 370, 0)
-hideturtle()
-tracer(False)
-listen()
-onkey(lambda: move(1, 20), 'w')
-onkey(lambda: move(1, -20), 's')
-onkey(lambda: move(2, 20), 'i')
-onkey(lambda: move(2, -20), 'k')
+tur.setup(420, 420, 370, 0)
+tur.hideturtle()
+tur.tracer(False)
+tur.listen()
+tur.onkey(lambda: move(1, 20), 'w')
+tur.onkey(lambda: move(1, -20), 's')
+tur.onkey(lambda: move(2, 20), 'i')
+tur.onkey(lambda: move(2, -20), 'k')
 draw()
-done()
+tur.done()
